@@ -36,7 +36,7 @@ class CompanyRegistrationView(RegisterView):
 
 # Login Employee & Company
 ######################################################################################
-@csrf_exempt
+# @csrf_exempt
 @api_view(['POST'])
 def login_user(request):
         data = {}
