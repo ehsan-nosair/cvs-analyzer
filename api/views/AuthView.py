@@ -63,6 +63,7 @@ def login_user(request):
             if Account.is_active:
                 login(request, Account)
                 data["message"] = "user logged in"
+                data["id"] = Account.id
                 data["email_address"] = Account.email
                 if Account.is_employee:
                     data["role"] = "employee"
@@ -78,6 +79,7 @@ def login_user(request):
 
         else:
             responseData = {"message": "Account doesnt exist"}
+            
             return Response(responseData, status.HTTP_400_BAD_REQUEST)
 
 @csrf_exempt
