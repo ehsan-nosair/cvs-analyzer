@@ -20,6 +20,8 @@ from api.serializers import (
     )
 
 
+##comment for testing
+
 # Employee Register
 ######################################################################################
 class EmployeeRegistrationView(RegisterView):
